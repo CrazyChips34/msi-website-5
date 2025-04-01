@@ -21,7 +21,7 @@ const teamMembers = [
     bio: 'Occupational Medical Practitioner and public health expert with over a decade of experience in healthcare management and policy.',
   },
   {
-    name: 'Zenith Tsengwa',
+    name: 'Mr Zenith Tsengwa',
     role: 'Board Member',
     image: '/images/board_members/msi_board_Mr_Zenith_Tsengwa.webp',
     bio: 'Dynamic business leader with expertise in project management, strategy, and investment, and a passion for education and community upliftment.',
