@@ -108,14 +108,14 @@ const Footer = () => {
             <ul className="space-y-3">
               <span className="font-semibold">Johannesburg Office: </span>
               <li className="flex items-start space-x-3">
-                <FaMapMarkerAlt className="w-8 h-8 sm:w-5 h-5 text-red-500 mt-1" />
+                <FaMapMarkerAlt className="text-l md:text-l sm:text-l text-red-500 mt-1" />
                 <a target="_blank" href="https://maps.app.goo.gl/qUpZ8p9zCyEu1WSf8" 
                 className="hover:text-red-500 transition-colors duration-300">
                 <span>4th Flour, West Tower, Nelson Mandela Square, Sandtan City, Johannesburg</span>
                 </a>
               </li>
               <li className="flex items-center space-x-3">
-                <FaPhone className="w-4 h-4 text-red-500" />
+                <FaPhone className="text-l text-red-500" />
                 <a target="_blank" href="tel:+27115684332" 
                 className="hover:text-red-500 transition-colors duration-300">
                 <span> +27 11 568 4332</span>
@@ -125,14 +125,14 @@ const Footer = () => {
               </li>
               <span className="font-semibold">East London Office: </span>
               <li className="flex items-start space-x-3">
-                <FaMapMarkerAlt className="w-5 h-5 text-red-500 mt-1" />
+                <FaMapMarkerAlt className="text-l text-red-500 mt-1" />
                 <a target="_blank" href="https://maps.app.goo.gl/o1zsynzNxkq25LHT7" 
                 className="hover:text-red-500 transition-colors duration-300">
                 <span>1 Scherwitz Road, Berea, East London</span>
                 </a>
               </li>
               <li className="flex items-center space-x-3">
-                <FaPhone className="w-4 h-4 text-red-500" />
+                <FaPhone className="text-l text-red-500" />
                 <a target="_blank" href="tel:+27437262171" 
                 className="hover:text-red-500 transition-colors duration-300">
                 <span> +27 43 726 2171</span>
@@ -140,13 +140,23 @@ const Footer = () => {
               </li>
               
               <li className="flex items-center space-x-3">
-                <FaEnvelope className="w-7 h-7 sm:w-5 h-5 text-red-500" />
+                <FaEnvelope className="text-l md:text-l sm:text-l  text-red-500" />
                 <a 
                   target="_blank"
                   href="mailto:info@mathsandscienceinfinity.org.za" 
                   className="hover:text-red-500 transition-colors duration-300"
                 >
                   info@mathsandscienceinfinity.org.za
+                </a>
+              </li>
+              <li className="flex items-center space-x-3">
+                <FaEnvelope className="text-l md:text-l sm:text-l text-red-500" />
+                <a 
+                  target="_blank"
+                  href="mailto:media@mathsandscienceinfinity.org.za" 
+                  className="hover:text-red-500 transition-colors duration-300"
+                >
+                  media@mathsandscienceinfinity.org.za
                 </a>
               </li>
             </ul>
