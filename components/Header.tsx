@@ -14,7 +14,6 @@ import {
   DropdownMenuTrigger,
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu"
-import { ComingSoonModal } from '@/components/ui/coming-soon-modal'
 
 const menuVariants = {
   closed: {
@@ -53,8 +52,6 @@ const backdropVariants = {
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
-  const [showComingSoon, setShowComingSoon] = useState(false)
-  const [comingSoonTitle, setComingSoonTitle] = useState('')
   const pathname = usePathname()
   const isResourcePage = pathname.startsWith('/resources')
   const isTutorPage = pathname.startsWith('/become-a-tutor')
@@ -109,12 +106,6 @@ const Header = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
-
-  const handleResourceClick = (e: React.MouseEvent, title: string) => {
-    e.preventDefault();
-    setComingSoonTitle(title);
-    setShowComingSoon(true);
-  };
 
   const resourcesItems = [
     { 
@@ -233,17 +224,18 @@ const Header = () => {
                     align="right"
                   >
                     {resourcesItems.map((resource) => (
-                      <DropdownMenuItem 
-                        key={resource.name}
-                        onClick={() => handleResourceClick(new Event('click') as any, resource.name)}
-                        className={cn(
-                          "text-gray-600 hover:text-gray-900 font-medium",
-                          pathname === resource.href && "text-red-600"
-                        )}
-                      >
-                        {resource.name}
+                      <DropdownMenuItem key={resource.name}>
+                        <Link
+                          href={resource.href}
+                          className={cn(
+                            "text-gray-600 hover:text-gray-900 font-medium w-full block",
+                            pathname === resource.href && "text-red-600"
+                          )}
+                        >
+                          {resource.name}
+                        </Link>
                       </DropdownMenuItem>
-                    ))}
+                    ))} 
                   </DropdownMenu>
                 );
               }
@@ -355,19 +347,17 @@ const Header = () => {
                     </Link>
                     <div className="mt-2 space-y-2 pl-4">
                       {resourcesItems.map((item) => (
-                        <button
+                        <Link
                           key={item.name}
-                          onClick={(e) => {
-                            handleResourceClick(e, item.name);
-                            toggleMenu();
-                          }}
+                          href={item.href}
+                          onClick={toggleMenu}
                           className={cn(
                             "block text-sm font-medium w-full text-left",
                             pathname === item.href ? "text-red-600" : "text-gray-600"
                           )}
                         >
                           {item.name}
-                        </button>
+                        </Link>
                       ))}
                     </div>
                   </div>
@@ -385,7 +375,7 @@ const Header = () => {
                     </a>
                     <Button 
                       asChild 
-                      className="w-full bg-red-600 text-white hover:bg-red-700"
+                      className="w-full bg-red-600 text-white hover:bg-red-700 pt-3"
                       onClick={toggleMenu}
                     >
                       <Link href="/donate">Donate Now</Link>
@@ -397,12 +387,6 @@ const Header = () => {
           )}
         </AnimatePresence>
       </div>
-
-      {/* <ComingSoonModal 
-        isOpen={showComingSoon} 
-        title={comingSoonTitle} 
-        onClose={() => setShowComingSoon(false)} 
-      /> */}
     </header>
   )
 }
