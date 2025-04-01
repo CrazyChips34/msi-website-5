@@ -140,7 +140,7 @@ const Footer = () => {
               </li>
               
               <li className="flex items-center space-x-3">
-                <FaEnvelope className="w-5 h-5 text-red-500" />
+                <FaEnvelope className="w-7 h-7 text-red-500" />
                 <a 
                   target="_blank"
                   href="mailto:info@mathsandscienceinfinity.org.za" 
