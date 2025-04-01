@@ -104,7 +104,7 @@ const WhatsAppButton = () => {
       </AnimatePresence>
       
       <motion.a
-        href="https://wa.me/+27437262171"
+        href="https://wa.me/+27817461678"
         target="_blank"
         rel="noopener noreferrer"
         variants={buttonVariants}
