@@ -109,14 +109,14 @@ const Footer = () => {
               <span>Johannesburg Office: </span>
               <li className="flex items-start space-x-3">
                 <FaMapMarkerAlt className="w-8 h-8 text-red-500 mt-1" />
-                <a href="https://maps.app.goo.gl/qUpZ8p9zCyEu1WSf8" 
+                <a target="_blank" href="https://maps.app.goo.gl/qUpZ8p9zCyEu1WSf8" 
                 className="hover:text-red-500 transition-colors duration-300">
                 <span>4th Flour, West Tower, Nelson Mandela Square, Sandtan City, Johannesburg</span>
                 </a>
               </li>
               <li className="flex items-center space-x-3">
                 <FaPhone className="w-4 h-4 text-red-500" />
-                <a href="tel:+27115684332" 
+                <a target="_blank" href="tel:+27115684332" 
                 className="hover:text-red-500 transition-colors duration-300">
                 <span> +27 11 568 4332</span>
                 </a>
@@ -126,14 +126,14 @@ const Footer = () => {
               <span>East London Office: </span>
               <li className="flex items-start space-x-3">
                 <FaMapMarkerAlt className="w-5 h-5 text-red-500 mt-1" />
-                <a href="https://maps.app.goo.gl/o1zsynzNxkq25LHT7" 
+                <a target="_blank" href="https://maps.app.goo.gl/o1zsynzNxkq25LHT7" 
                 className="hover:text-red-500 transition-colors duration-300">
                 <span>1 Scherwitz Road, Berea, East London</span>
                 </a>
               </li>
               <li className="flex items-center space-x-3">
                 <FaPhone className="w-4 h-4 text-red-500" />
-                <a href="tel:+27437262171" 
+                <a target="_blank" href="tel:+27437262171" 
                 className="hover:text-red-500 transition-colors duration-300">
                 <span> +27 43 726 2171</span>
                 </a>
@@ -142,6 +142,7 @@ const Footer = () => {
               <li className="flex items-center space-x-3">
                 <FaEnvelope className="w-5 h-5 text-red-500" />
                 <a 
+                  target="_blank"
                   href="mailto:info@mathsandscienceinfinity.org.za" 
                   className="hover:text-red-500 transition-colors duration-300"
                 >
