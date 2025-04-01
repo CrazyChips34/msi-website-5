@@ -84,11 +84,6 @@ msi-website/
 
 The site can be deployed on Vercel, Netlify, or any other platform that supports Next.js.
 
-## Contributing
-
-1. Create a feature branch
-2. Make your changes
-3. Submit a pull request
 
 ## License
 
