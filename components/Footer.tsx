@@ -108,7 +108,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <span className="font-semibold">Johannesburg Office: </span>
               <li className="flex items-start space-x-3">
-                <FaMapMarkerAlt className="w-8 h-8 text-red-500 mt-1" />
+                <FaMapMarkerAlt className="w-8 h-8 sm:w-5 h-5 text-red-500 mt-1" />
                 <a target="_blank" href="https://maps.app.goo.gl/qUpZ8p9zCyEu1WSf8" 
                 className="hover:text-red-500 transition-colors duration-300">
                 <span>4th Flour, West Tower, Nelson Mandela Square, Sandtan City, Johannesburg</span>
@@ -140,7 +140,7 @@ const Footer = () => {
               </li>
               
               <li className="flex items-center space-x-3">
-                <FaEnvelope className="w-7 h-7 text-red-500" />
+                <FaEnvelope className="w-7 h-7 sm:w-5 h-5 text-red-500" />
                 <a 
                   target="_blank"
                   href="mailto:info@mathsandscienceinfinity.org.za" 
