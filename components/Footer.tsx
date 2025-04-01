@@ -106,7 +106,7 @@ const Footer = () => {
           <motion.div variants={fadeInUp} className="space-y-4">
             <h3 className="text-lg font-semibold text-white">Contact Us</h3>
             <ul className="space-y-3">
-              <span>Johannesburg Office: </span>
+              <span className="font-semibold">Johannesburg Office: </span>
               <li className="flex items-start space-x-3">
                 <FaMapMarkerAlt className="w-8 h-8 text-red-500 mt-1" />
                 <a target="_blank" href="https://maps.app.goo.gl/qUpZ8p9zCyEu1WSf8" 
@@ -123,7 +123,7 @@ const Footer = () => {
               </li>
               <li className="space-y-3">
               </li>
-              <span>East London Office: </span>
+              <span className="font-semibold">East London Office: </span>
               <li className="flex items-start space-x-3">
                 <FaMapMarkerAlt className="w-5 h-5 text-red-500 mt-1" />
                 <a target="_blank" href="https://maps.app.goo.gl/o1zsynzNxkq25LHT7" 
