@@ -2,32 +2,28 @@ export const mathVideos = {
   10: {
     algebra: [
       {
-        id: 'math-g10-alg-1',
-        title: 'Basic Algebraic Operations',
-        duration: '12:45',
-        youtubeUrl: 'https://youtube.com/watch?v=your-video-id',
-        thumbnail: 'https://img.youtube.com/vi/your-video-id/maxresdefault.jpg'
-      },
-      // Add more videos...
-    ],
-    // Add more topics...
-  },
-  // Add more grades...
+        id: '<VIDEO_ID>', // Replace with actual YouTube video ID
+        title: 'Mathematics Grade 10: Functions',
+        duration: '15:30',
+        youtubeUrl: 'https://youtube.com/watch?v=<VIDEO_ID>',
+        thumbnail: `https://img.youtube.com/vi/<VIDEO_ID>/maxresdefault.jpg`,
+        topic: 'Algebra'
+      }
+    ]
+  }
 };
 
 export const scienceVideos = {
   10: {
     mechanics: [
       {
-        id: 'ps-g10-mech-1',
-        title: 'Introduction to Forces',
+        id: 'VIDEO_ID', // Add actual video IDs from your channel
+        title: 'Physical Science Grade 10: Forces',
         duration: '14:20',
-        youtubeUrl: 'https://youtube.com/watch?v=your-video-id',
-        thumbnail: 'https://img.youtube.com/vi/your-video-id/maxresdefault.jpg'
-      },
-      // Add more videos...
-    ],
-    // Add more topics...
-  },
-  // Add more grades...
+        youtubeUrl: 'https://youtube.com/watch?v=VIDEO_ID',
+        thumbnail: `https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg`,
+        topic: 'Mechanics'
+      }
+    ]
+  }
 };
