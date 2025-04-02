@@ -4,14 +4,80 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { Button } from "@/components/ui/button"
 
+// Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
+  visible: { opacity: 1, y: 0 }
 }
 
-const services = [
+// Define types for our data structures
+interface Service {
+  title: string
+  description: string
+  highlightTerms: string[]
+  features: string[]
+  image: string
+  category: string
+}
+
+interface Category {
+  name: string
+  icon: JSX.Element
+  description: string
+}
+
+// Service category definitions
+const categories: Category[] = [
+  {
+    name: "Learner Development",
+    icon: <Image src="/images/icons/msi_students_service_page_icon.svg" alt="Learner Development" width={100} height={100} />, 
+    description: "Comprehensive programs designed to help students excel in mathematics and science through personalized support and enrichment."
+  },
+  {
+    name: "Teacher Development",
+    icon: <Image src="/images/icons/msi_profess_ser_page_icon.svg" alt="Teacher Development" width={100} height={100} />, 
+    description: "Training and upskilling educators to improve teaching methodologies and enhance subject mastery for better student outcomes."
+  },
+  {
+    name: "Tutor Development",
+    icon: <Image src="/images/icons/msi_profess_ser_page_icon.svg" alt="Tutor Development" width={100} height={100} />, 
+    description: "Equipping tutors with the necessary skills and resources to effectively support and inspire learners in STEM subjects."
+  },
+  {
+    name: "Mobile Laboratories",
+    icon: <Image src="/images/icons/msi_lab_icon.svg" alt="Mobile Laboratories" width={100} height={100} />, 
+    description: "Bringing practical science experiments to schools with limited laboratory facilities for hands-on learning experiences."
+  },
+  {
+    name: "Career Guidance & Role Modelling",
+    icon: <Image src="/images/icons/msi_students_service_page_icon.svg" alt="Career Guidance & Role Modelling" width={100} height={100} />, 
+    description: "Connecting learners with industry professionals to inspire and guide their career choices in STEM fields."
+  },
+  {
+    name: "Project Management",
+    icon: <Image src="/images/icons/msi_profess_ser_page_icon.svg" alt="Project Management" width={100} height={100} />, 
+    description: "Overseeing and implementing educational projects and initiatives with comprehensive planning and evaluation."
+  },
+  {
+    name: "Research & Development",
+    icon: <Image src="/images/icons/msi_lab_icon.svg" alt="Research & Development" width={100} height={100} />, 
+    description: "Conducting studies and developing innovative strategies to improve STEM education through evidence-based approaches."
+  },
+  {
+    name: "E-Learning",
+    icon: <Image src="/images/icons/msi_digital_icon.svg" alt="E-Learning" width={100} height={100} />, 
+    description: "Providing digital learning platforms and resources for accessible, flexible, and engaging education anywhere."
+  },
+  {
+    name: "Learner Psychosocial Support",
+    icon: <Image src="/images/icons/msi_digital_icon.svg" alt="Learner Psychosocial Support" width={100} height={100} />, 
+    description: "Empowering tutors to support learners' emotional well-being, resilience, and motivation."
+  }
+]
+
+// Detailed service information
+const services: Service[] = [
   {
     title: "Learner Development",
     description: "Providing comprehensive academic support, personalized tutoring, and enrichment programs to enhance learners' performance in mathematics and science subjects.",
@@ -116,7 +182,7 @@ const services = [
     image: "/images/gallery/msi-online-learning.jpg",
     category: "E-Learning"
   },
- {
+  {
     title: "Learner Psychosocial Support",
     description: "Empowering tutors to nurture learners' emotional well-being, resilience, and motivation.",
     highlightTerms: ["emotional well-being", "resilience", "motivation"],
@@ -128,58 +194,10 @@ const services = [
     ],
     image: "/images/gallery/msi-applicant.jpg",
     category: "Learner Psychosocial Support"
-}
-]
-
-const categories = [
-  {
-    name: "Learner Development",
-    icon: <Image src="/images/icons/msi_students_service_page_icon.svg" alt="Learner Development" width={100} height={100} />, 
-    description: "Comprehensive programs designed to help students excel in mathematics and science through personalized support and enrichment."
-  },
-  {
-    name: "Teacher Development",
-    icon: <Image src="/images/icons/msi_profess_ser_page_icon.svg" alt="Teacher Development" width={100} height={100} />, 
-    description: "Training and upskilling educators to improve teaching methodologies and enhance subject mastery for better student outcomes."
-  },
-  {
-    name: "Tutor Development",
-    icon: <Image src="/images/icons/msi_profess_ser_page_icon.svg" alt="Tutor Development" width={100} height={100} />, 
-    description: "Equipping tutors with the necessary skills and resources to effectively support and inspire learners in STEM subjects."
-  },
-  {
-    name: "Mobile Laboratories",
-    icon: <Image src="/images/icons/msi_lab_icon.svg" alt="Mobile Laboratories" width={100} height={100} />, 
-    description: "Bringing practical science experiments to schools with limited laboratory facilities for hands-on learning experiences."
-  },
-  {
-    name: "Career Guidance & Role Modelling",
-    icon: <Image src="/images/icons/msi_students_service_page_icon.svg" alt="Career Guidance & Role Modelling" width={100} height={100} />, 
-    description: "Connecting learners with industry professionals to inspire and guide their career choices in STEM fields."
-  },
-  {
-    name: "Project Management",
-    icon: <Image src="/images/icons/msi_profess_ser_page_icon.svg" alt="Project Management" width={100} height={100} />, 
-    description: "Overseeing and implementing educational projects and initiatives with comprehensive planning and evaluation."
-  },
-  {
-    name: "Research & Development",
-    icon: <Image src="/images/icons/msi_lab_icon.svg" alt="Research & Development" width={100} height={100} />, 
-    description: "Conducting studies and developing innovative strategies to improve STEM education through evidence-based approaches."
-  },
-  {
-    name: "E-Learning",
-    icon: <Image src="/images/icons/msi_digital_icon.svg" alt="E-Learning" width={100} height={100} />, 
-    description: "Providing digital learning platforms and resources for accessible, flexible, and engaging education anywhere."
-  },
-  {
-    name: "Learner Psychosocial Support",
-    icon: <Image src="/images/icons/msi_digital_icon.svg" alt="Learner Psychosocial Support" width={100} height={100} />, 
-    description: "Empowering tutors to support learners' emotional well-being, resilience, and motivation."
   }
-
 ]
 
+// Helper function to highlight specific terms in text
 const highlightText = (text: string, terms: string[] = []) => {
   if (!terms || terms.length === 0) return text;
   
@@ -226,9 +244,8 @@ export default function Services() {
       {/* Categories Overview */}
       <section className="py-24">
         <div className="container mx-auto px-4">
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-            {categories.slice(0, 8).map((category, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {categories.map((category, index) => (
               <motion.div
                 key={`${category.name}-${index}`}
                 initial="hidden"
@@ -247,7 +264,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Detailed Services */}
+      {/* Detailed Services Section */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <motion.h2
