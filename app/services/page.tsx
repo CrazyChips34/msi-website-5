@@ -115,7 +115,20 @@ const services = [
     ],
     image: "/images/gallery/msi-online-learning.jpg",
     category: "E-Learning"
-  }
+  },
+ {
+    title: "Learner Psychosocial Support",
+    description: "Empowering tutors to nurture learners' emotional well-being, resilience, and motivation.",
+    highlightTerms: ["emotional well-being", "resilience", "motivation"],
+    features: [
+      "Workshops on mental health awareness and emotional intelligence",
+      "Training in trauma-informed teaching and conflict resolution",
+      "Personalized mentorship and peer support networks",
+      "Access to counseling resources and intervention strategies"
+    ],
+    image: "/images/gallery/msi-applicant.jpg",
+    category: "Learner Psychosocial Support"
+}
 ]
 
 const categories = [
@@ -158,7 +171,13 @@ const categories = [
     name: "E-Learning",
     icon: <Image src="/images/icons/msi_digital_icon.svg" alt="E-Learning" width={100} height={100} />, 
     description: "Providing digital learning platforms and resources for accessible, flexible, and engaging education anywhere."
+  },
+  {
+    name: "Learner Psychosocial Support",
+    icon: <Image src="/images/icons/msi_digital_icon.svg" alt="Learner Psychosocial Support" width={100} height={100} />, 
+    description: "Empowering tutors to support learners' emotional well-being, resilience, and motivation."
   }
+
 ]
 
 const highlightText = (text: string, terms: string[] = []) => {
