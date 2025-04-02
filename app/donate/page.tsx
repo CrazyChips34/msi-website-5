@@ -16,7 +16,7 @@ import {
   BookOpen, 
   Laptop, 
   Shirt, 
-  Trophy, 
+  Heart, 
   Palette, 
   Apple, 
   Mail, 
@@ -37,7 +37,7 @@ export default function DonatePage() {
     { icon: <BookOpen className="w-8 h-8" />, title: 'Educational Materials', description: 'Books, stationery, and learning resources' },
     { icon: <Laptop className="w-8 h-8" />, title: 'Technology', description: 'Computers, tablets, and educational software' },
     { icon: <Shirt className="w-8 h-8" />, title: 'School Uniforms', description: 'New or gently used uniforms' },
-    { icon: <Trophy className="w-8 h-8" />, title: 'Sports Equipment', description: 'Sports gear and equipment' },
+    { icon: <Heart className="w-8 h-8" />, title: 'Health and Hygiene', description: 'Essential health and hygiene products for well-being.' },
     { icon: <Palette className="w-8 h-8" />, title: 'Art Supplies', description: 'Art materials and creative resources' },
     { icon: <Apple className="w-8 h-8" />, title: 'Food & Nutrition', description: 'Non-perishable food items' }
   ]
@@ -136,7 +136,7 @@ export default function DonatePage() {
                       </a>
                     </Button>
                     <Button variant="outline" size="lg" asChild>
-                      <a href="https://wa.me/27437262171">
+                      <a href="https://wa.me/+27817461678">
                         <MessageCircle className="w-5 h-5 mr-2" /> WhatsApp
                       </a>
                     </Button>
@@ -210,7 +210,7 @@ export default function DonatePage() {
             <Card className="p-6">
               <h3 className="text-xl font-semibold mb-2">Is my donation tax-deductible?</h3>
               <p className="text-gray-700">
-                Yes, MSI Africa is a registered non-profit organization. Your monetary donations are tax-deductible, and we'll provide you with a receipt for tax purposes.
+                Yes, MSI Africa is a registered non-profit organization. Your monetary donations are tax-deductible, and we'll provide you with Section 18A Certificate for tax purposes.
               </p>
             </Card>
             

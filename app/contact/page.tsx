@@ -145,6 +145,16 @@ export default function ContactPage() {
           href: "mailto:info@mathsandscienceinfinity.org.za"
         }
       ]
+    },
+    {
+      title: "PR Email",
+      details: [
+        {
+          info: "media@mathsandscienceinfinity.org.za",
+          icon: <FaEnvelope className="text-red-500 text-xl" />,
+          href: "mailto:media@mathsandscienceinfinity.org.za"
+        }
+      ]
     }
   ];
   

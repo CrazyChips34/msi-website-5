@@ -3,7 +3,6 @@ export interface JobListing {
   title: string;
   company: string;
   location: string;
-  salary: string;
   employmentType: string;
   responseTime?: string;
   description: string[];
@@ -16,7 +15,6 @@ export const jobListings: JobListing[] = [
     title: 'Mathematics Tutor',
     company: 'Maths and Science Infinity',
     location: 'East London, Eastern Cape',
-    salary: 'From R1 500 a month',
     employmentType: 'Part-time',
     responseTime: 'Typically responds within 2 days',
     description: [
@@ -32,7 +30,6 @@ export const jobListings: JobListing[] = [
     title: 'Science Tutor',
     company: 'Maths and Science Infinity',
     location: 'East London, Eastern Cape',
-    salary: 'From R1 000 a month',
     employmentType: 'Full-time',
     responseTime: 'Typically responds within 1 day',
     description: [

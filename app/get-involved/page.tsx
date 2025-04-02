@@ -422,7 +422,7 @@ export default function GetInvolved() {
                 className="w-full flex justify-center items-center"
               >
                 <GraduationCap className="w-5 h-5 mr-2 flex-shrink-0" /> 
-                <span className="whitespace-nowrap">Careers</span>
+                <span className="whitespace-nowrap">Tutor Opportunities</span>
               </Button>
               <Button
                 variant={applicationType === 'sponsor' ? 'default' : 'outline'}
@@ -489,7 +489,7 @@ export default function GetInvolved() {
                             <div className="p-4">
                               <h3 className="text-lg font-semibold text-gray-900 mb-1">{job.title}</h3>
                               <p className="text-gray-600 text-sm mb-2">{job.location}</p>
-                              <p className="text-gray-700 text-sm mb-3">{job.employmentType} • {job.salary}</p>
+                              <p className="text-gray-700 text-sm mb-3">{job.employmentType}</p>
                               
                               <Button 
                                 onClick={() => handleJobSelect(job)}
@@ -525,7 +525,6 @@ export default function GetInvolved() {
                         
                         <div className="flex items-center justify-between mb-4">
                           <span className="text-gray-600 bg-gray-100 px-3 py-1 rounded-full text-sm">{selectedJob.employmentType}</span>
-                          <span className="text-gray-700 font-medium">{selectedJob.salary}</span>
                         </div>
                         
                         {selectedJob.responseTime && (
