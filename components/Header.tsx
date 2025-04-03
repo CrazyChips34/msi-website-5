@@ -301,26 +301,29 @@ const Header = () => {
                 exit="closed"
               >
                 <div className="flex flex-col space-y-4">
-                  {navItems.map((item) => {
-                    const itemPath = item === 'Home' ? '/' : `/${item.toLowerCase().replace(/\s+/g, '-')}`;
-                    const isActive = pathname === itemPath
+                  {/* Filter out Resources from main nav items */}
+                  {navItems
+                    .filter(item => item !== 'Resources')
+                    .map((item) => {
+                      const itemPath = item === 'Home' ? '/' : `/${item.toLowerCase().replace(/\s+/g, '-')}`;
+                      const isActive = pathname === itemPath
 
-                    return (
-                      <Link
-                        key={item}
-                        href={itemPath}
-                        className={cn(
-                          "text-lg font-medium",
-                          isActive ? "text-red-600" : "text-gray-600"
-                        )}
-                        onClick={toggleMenu}
-                      >
-                        {item === 'Blog' ? 'Blog' : item}
-                      </Link>
-                    )
-                  })}
+                      return (
+                        <Link
+                          key={item}
+                          href={itemPath}
+                          className={cn(
+                            "text-lg font-medium",
+                            isActive ? "text-red-600" : "text-gray-600"
+                          )}
+                          onClick={toggleMenu}
+                        >
+                          {item === 'Blog' ? 'Blog' : item}
+                        </Link>
+                      )
+                    })}
 
-                  {/* Mobile Resources Dropdown */}
+                  {/* Resources Dropdown */}
                   <div className="relative">
                     <Link
                       href="/resources"
@@ -328,7 +331,6 @@ const Header = () => {
                         "text-lg font-medium block mb-2",
                         pathname === '/resources' ? "text-red-600" : pathname.startsWith('/resources') ? "text-red-400" : "text-gray-600"
                       )}
-                      onClick={toggleMenu}
                     >
                       Resources
                     </Link>
