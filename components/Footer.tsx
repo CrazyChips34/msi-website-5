@@ -5,6 +5,17 @@ import { motion } from 'framer-motion'
 import { fadeInUp, staggerContainer } from '@/utils/animations'
 import { useState, useEffect } from 'react'
 
+// Define email contacts at the top of the component
+const emailContacts = [
+  {
+    address: 'info@mathsandscienceinfinity.org.za',
+    label: 'General Inquiries'
+  },
+  {
+    address: 'media@mathsandscienceinfinity.org.za',
+    label: 'Media Relations'
+  }
+]
 
 const Footer = () => {
   const [currentYear, setCurrentYear] = useState('2025')
@@ -108,10 +119,18 @@ const Footer = () => {
             <ul className="space-y-3">
               <span className="font-semibold">Johannesburg Office: </span>
               <li className="flex items-start space-x-3">
-                <FaMapMarkerAlt className="text-l md:text-l sm:text-l text-red-500 mt-1" />
-                <a target="_blank" href="https://maps.app.goo.gl/qUpZ8p9zCyEu1WSf8" 
-                className="hover:text-red-500 transition-colors duration-300">
-                <span>4th Flour, West Tower, Nelson Mandela Square, Sandtan City, Johannesburg</span>
+                <FaMapMarkerAlt className="text-l text-red-500 mt-1 flex-shrink-0" />
+                <a 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://maps.app.goo.gl/qUpZ8p9zCyEu1WSf8" 
+                  className="hover:text-red-500 transition-colors duration-300"
+                >
+                  <span className="block">
+                    4th Floor, West Tower,<br />
+                    Nelson Mandela Square,<br />
+                    Sandton City, Johannesburg
+                  </span>
                 </a>
               </li>
               <li className="flex items-center space-x-3">
@@ -139,26 +158,22 @@ const Footer = () => {
                 </a>
               </li>
               
-              <li className="flex items-center space-x-3">
-                <FaEnvelope className="text-l md:text-l sm:text-l  text-red-500" />
-                <a 
-                  target="_blank"
-                  href="mailto:info@mathsandscienceinfinity.org.za" 
-                  className="hover:text-red-500 transition-colors duration-300"
-                >
-                  info@mathsandscienceinfinity.org.za
-                </a>
-              </li>
-              <li className="flex items-center space-x-3">
-                <FaEnvelope className="text-l md:text-l sm:text-l text-red-500" />
-                <a 
-                  target="_blank"
-                  href="mailto:media@mathsandscienceinfinity.org.za" 
-                  className="hover:text-red-500 transition-colors duration-300"
-                >
-                  media@mathsandscienceinfinity.org.za
-                </a>
-              </li>
+              {emailContacts.map((email) => (
+                <li key={email.address} className="flex items-start space-x-3">
+                  <FaEnvelope className="text-l text-red-500 mt-1.5 flex-shrink-0" />
+                  <div className="flex flex-col">
+                    <span className="text-sm text-gray-400 mb-0.5">{email.label}</span>
+                    <a 
+                      href={`mailto:${email.address}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-red-500 transition-colors duration-300 break-all"
+                    >
+                      {email.address}
+                    </a>
+                  </div>
+                </li>
+              ))}
             </ul>
           </motion.div>
 
