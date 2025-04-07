@@ -165,7 +165,7 @@ export default function About() {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeIn}
-          className="text-3xl font-bold text-center mb-16 text-navy-blue"
+          className="text-3xl font-bold text-center mb-12 text-navy-blue"
         >
           Why Choose MSI?
         </motion.h2>
