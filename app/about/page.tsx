@@ -7,6 +7,7 @@ import Footer from '@/components/Footer'
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from 'next/link';
+import PyramidDiagram from "@/components/pyramid-diagram"
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -157,56 +158,19 @@ export default function About() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 bg-gray-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/gallery/msi-hero.jpg')] opacity-40 bg-cover bg-center"></div>
-        <div className="container relative mx-auto px-4">
-          <motion.h2 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeIn}
-            className="text-3xl font-bold text-center mb-12 text-navy-blue"
-          >
-            Why Choose MSI?
-          </motion.h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'Expert Instructors',
-                description: 'Our dedicated team of experienced educators and industry professionals is committed to providing the best learning experience, ensuring that every student receives the guidance they need to succeed.',
-                icon: <Image src="/images/icons/msi_about_instruct_icon.png" alt="Expert Instructors" width={60} height={60} />,
-              },
-              {
-                title: 'Proven Results',
-                description: 'With a track record of improving student performance and understanding, MSI helps students overcome challenges and build a strong foundation in maths and science—opening doors to exciting future opportunities.',
-                icon: <Image src="/images/icons/msi_about_results_transparent.png" alt="Proven Results" width={60} height={60} />,
-
-              },
-              {
-                title: 'Innovative Approach',
-                description: 'We blend traditional teaching with the latest technology and hands-on experiences, creating an engaging and interactive learning environment that fosters curiosity and deep understanding.',
-                icon: <Image src="/images/icons/msi_about_transparen_lab.png" alt="Innovative Approach" width={60} height={60} />,
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeIn}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Card className="h-full bg-white/10 backdrop-blur-lg border-white/20">
-                  <CardContent className="p-8 flex flex-col items-center text-center">
-                    <div className="text-5xl mb-6">{item.icon}</div>
-                    <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
-                    <p className="text-gray-300 text-lg leading-relaxed">{item.description}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+      <section className="py-24 bg-white text-navy-blue relative overflow-hidden">
+      <div className="container relative mx-auto px-4">
+        <motion.h2
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+          className="text-3xl font-bold text-center mb-16 text-navy-blue"
+        >
+          Why Choose MSI?
+        </motion.h2>
+        <PyramidDiagram />
+      </div>
       </section>
 
       {/* Our Values */}
