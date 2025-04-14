@@ -74,25 +74,25 @@ export default function CurriculumPage() {
                       <ul className="space-y-2">
                         <li className="flex items-center text-gray-600">
                           <FileText className="w-4 h-4 mr-2 text-red-600" />
-                          <Link href={`/resources/curriculum/mathematics/grade-${grade}/syllabus`} className="hover:text-red-600 transition-colors">
+                          <Link href={`/resources/curriculum/mathematics/grade-${grade}/`} className="hover:text-red-600 transition-colors">
                             Topics
                           </Link>
                         </li>
                         <li className="flex items-center text-gray-600">
                           <Book className="w-4 h-4 mr-2 text-red-600" />
-                          <Link href={`/resources/curriculum/mathematics/grade-${grade}/textbooks`} className="hover:text-red-600 transition-colors">
+                          <Link href={`/resources/curriculum/mathematics/grade-${grade}/`} className="hover:text-red-600 transition-colors">
                             Study Guides
                           </Link>
                         </li>
                         <li className="flex items-center text-gray-600">
                           <Download className="w-4 h-4 mr-2 text-red-600" />
-                          <Link href={`/resources/curriculum/mathematics/grade-${grade}/worksheets`} className="hover:text-red-600 transition-colors">
+                          <Link href={`/resources/curriculum/mathematics/grade-${grade}/`} className="hover:text-red-600 transition-colors">
                             Notes 
                           </Link>
                         </li>
                         <li className="flex items-center text-gray-600">
                           <Download className="w-4 h-4 mr-2 text-red-600" />
-                          <Link href={`/resources/curriculum/mathematics/grade-${grade}/worksheets`} className="hover:text-red-600 transition-colors">
+                          <Link href={`/resources/curriculum/mathematics/grade-${grade}/`} className="hover:text-red-600 transition-colors">
                             Assesments
                           </Link>
                         </li>
@@ -121,25 +121,25 @@ export default function CurriculumPage() {
                       <ul className="space-y-2">
                         <li className="flex items-center text-gray-600">
                           <FileText className="w-4 h-4 mr-2 text-red-600" />
-                          <Link href={`/resources/curriculum/physical-science/grade-${grade}/topics`} className="hover:text-red-600 transition-colors">
+                          <Link href={`/resources/curriculum/physical-science/grade-${grade}/`} className="hover:text-red-600 transition-colors">
                             Topics
                           </Link>
                         </li>
                         <li className="flex items-center text-gray-600">
                           <Book className="w-4 h-4 mr-2 text-red-600" />
-                          <Link href={`/resources/curriculum/physical-science/grade-${grade}/guides`} className="hover:text-red-600 transition-colors">
+                          <Link href={`/resources/curriculum/physical-science/grade-${grade}/`} className="hover:text-red-600 transition-colors">
                             Study Guides
                           </Link>
                         </li>
                         <li className="flex items-center text-gray-600">
                           <Download className="w-4 h-4 mr-2 text-red-600" />
-                          <Link href={`/resources/curriculum/physical-science/grade-${grade}/notes`} className="hover:text-red-600 transition-colors">
+                          <Link href={`/resources/curriculum/physical-science/grade-${grade}/`} className="hover:text-red-600 transition-colors">
                             Notes 
                           </Link>
                         </li>
                         <li className="flex items-center text-gray-600">
                           <Download className="w-4 h-4 mr-2 text-red-600" />
-                          <Link href={`/resources/curriculum/physical-science/grade-${grade}/assesments`} className="hover:text-red-600 transition-colors">
+                          <Link href={`/resources/curriculum/physical-science/grade-${grade}/`} className="hover:text-red-600 transition-colors">
                             Assesments
                           </Link>
                         </li>
