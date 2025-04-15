@@ -250,14 +250,14 @@ const Header = () => {
           {/* Desktop Contact Info and Donate Button */}
           <div className="hidden md:flex items-center space-x-4">
             <a 
-              href="tel:+27437262171" 
+              href="tel:+27115684332" 
               className={cn(
                 "hover:text-gray-900",
                 "text-gray-600"
               )}
             >
               <PhoneIcon className="h-5 w-5 inline mr-2" />
-              +27 43 726 2171
+              +27 11 568 4332
             </a>
             <Button 
               asChild 
