@@ -88,7 +88,7 @@ const services: Service[] = [
       "Curriculum-aligned resources and materials",
       "Focus on building confidence and deep conceptual understanding"
     ],
-    image: "/images/gallery/msi-classroom-learners.jpg",
+    image: "/images/gallery/msi-classroom-1.jpg",
     category: "Learner Development"
   },
   {
@@ -179,7 +179,7 @@ const services: Service[] = [
       "Progress tracking and personalized feedback systems",
       "Blended learning approaches that combine digital and traditional methods"
     ],
-    image: "/images/gallery/msi-online-learning.jpg",
+    image: "/images/gallery/msi-tutor.jpg",
     category: "E-Learning"
   },
   {
@@ -192,7 +192,7 @@ const services: Service[] = [
       "Personalized mentorship and peer support networks",
       "Access to counseling resources and intervention strategies"
     ],
-    image: "/images/gallery/msi-applicant.jpg",
+    image: "/images/gallery/msi-talks.jpg",
     category: "Learner Psychosocial Support"
   }
 ]
@@ -295,7 +295,7 @@ export default function Services() {
                       src={service.image}
                       alt={service.title}
                       fill
-                      className="object-cover"
+                      className="object-cover object-center scale-110"
                     />
                   </div>
                 </div>
